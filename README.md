@@ -97,3 +97,13 @@ https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webp
 Now, How we will use Jquery in Rails 6??
 
 https://blog.capsens.eu/how-to-write-javascript-in-rails-6-webpacker-yarn-and-sprockets-cdf990387463
+
+---
+Deploy to Heroku:
+
+```
+$ heroku create
+$ git push heroku master
+$ heroku run rake db:migrate
+$ heroku run rake db:seed
+$ heroku open
