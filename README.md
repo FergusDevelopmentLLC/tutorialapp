@@ -33,11 +33,11 @@ On the index view app/views/tutorials/index.html.erb, display all the tutorials.
 Back at the terminal...
 
 ```
-RAILS_ENV=development rake db:seed
-rm -rf node_modules
-rake webpacker:clobber
-yarn install --check-files
-rake webpacker:clobber
+$ RAILS_ENV=development rake db:seed
+$ rm -rf node_modules
+$ rake webpacker:clobber
+$ yarn install --check-files
+$ rake webpacker:clobber
 ```
 
 Copy/paste the following in config/webpack/environment.js:
@@ -74,10 +74,26 @@ $(document).ready(function() {
 Back at terminal:
 
 ```
-RAILS_ENV=development rake webpacker:clobber
-RAILS_ENV=development rake webpacker:compile
-RAILS_ENV=development bundle exec rails s
+$ RAILS_ENV=development rake webpacker:clobber
+$ RAILS_ENV=development rake webpacker:compile
+$ RAILS_ENV=development bundle exec rails s
 ```
 
 Visit http://localhost:3000/tutorials  
 Click the Hide link, which is powered by jquery.
+
+Cobbled together from:  
+https://devcenter.heroku.com/articles/getting-started-with-rails6  
+https://stackoverflow.com/questions/33380106/jquery-not-working-in-rails  
+https://github.com/rails/webpacker/issues/2478  
+```
+rm -rf node_modules
+rake webpacker:clobber
+yarn add <packages-used>
+yarn --check-files
+RAILS_ENV=... rake webpacker:compile
+```
+https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webpacker  
+Now, How we will use Jquery in Rails 6??
+
+https://blog.capsens.eu/how-to-write-javascript-in-rails-6-webpacker-yarn-and-sprockets-cdf990387463

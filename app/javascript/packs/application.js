@@ -17,7 +17,7 @@ require("channels")
 
 $(document).ready(function() {
   $('[data-js-hide-link]').click(function(event){
-    alert('You clicked the Hide link');
+    alert('You clicked the Hide link, which is powered by JQUERY');
     event.preventDefault(); 
   });
 })
